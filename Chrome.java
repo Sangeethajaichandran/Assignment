@@ -1,22 +1,26 @@
-package week1.day1;
+package day7;
 
-public class Chrome 
+public class Chrome extends Browser 
 {
+	public void openIncognito()
+	{System.out.println("open incognito--chrome");}
+	public void clearCache()
+	{System.out.println("Cleared cache--chrome");}
+
 	public static void main(String[] args) 
 	{
-		//Primitive Data Type
-	float version=91.0f;
-	String developer="Google";
-	boolean isBeta=false;//camelCase
-	int releaseYear=2008;//camelCase
-	char shortcutKey='C';//camelCase
-	
-	System.out.println(version);
-	System.out.println("developer:"+ developer);
-	System.out.println(isBeta);
-	System.out.println("Release Year:"+releaseYear);
-	System.out.println(shortcutKey);
-	
+		Chrome c=new Chrome();
+		c.openUrl();
+		c.closeBrowser();
+		c.navigateBack();
+		c.openIncognito();
+		c.clearCache();
+		c.browserName="Chrome";
+		c.browserVersion=11.25f;		
+		System.out.println("Browser Name:"+c.browserName);
+		System.out.println("Browser version:"+c.browserVersion);
+		
+		
 	}
 
 }
